@@ -1,0 +1,18 @@
+
+/*---=| Font Mixin |=---*/
+@mixin fontFamilyWeightSizeColor($fontFam, $fontWt, $fontSz, $Color) {
+	font-family: $fontFam;
+	font-weight: $fontWt;
+	font-size: $fontSz;
+	color: $Color;
+	// to use: @include fontFamilyWeightSizeColor ($rlg-primary-font, 600, 1em);
+}
+
+/*---=| Shadow Mixin |=---*/
+@mixin shadowMixin($fontFam, $fontWt, $fontSz, $Color) {
+	font-family: $fontFam;
+	font-weight: $fontWt;
+	font-size: $fontSz;
+	color: $Color;
+	// to use: @include fontFamilyWeightSizeColor ($rlg-primary-font, 600, 1em);
+}

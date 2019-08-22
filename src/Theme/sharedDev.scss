@@ -1,0 +1,33 @@
+
+// @import './../index.scss';
+
+.dev-divider-style {
+	position: relative;
+	@include fontFamilyWeightSizeColor($fontOpenSans, 400, .75em, var(--rlg-color-medium));
+	padding: 1em;
+	margin: 1em;
+	border: 1px solid var(--rlg-color-warning);
+  }
+  .dev-border {
+	border: 1px solid yellowgreen;
+  }
+  .dev-border-red {
+	border: 1px solid red;
+  }
+  .button-click {
+	width: 200px;
+	color: var(--rlg-color-warning);
+  }
+
+.car-container {
+	overflow: hidden;
+}
+
+.CarLink {
+	@include fontFamilyWeightSizeColor($fontMerriweather, 400, 2em, var(--rlg-color-danger-shade));
+	// text-transform: uppercase;
+	// color: var(--rlg-color-secondary);
+	text-decoration: none;
+  }
+
+ 

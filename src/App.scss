@@ -1,3 +1,8 @@
+/*--=| shared theme |=--*/
+@import './Theme/sharedThemeColors.scss';
+@import './Theme/sharedFont.scss';
+// @import './Theme/sharedDev.scss';
+
 .App {
   text-align: center;
 }

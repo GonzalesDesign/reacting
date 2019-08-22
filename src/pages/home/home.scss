@@ -1,0 +1,15 @@
+
+.home-main-container {
+	// position: fixed;
+	width: 100vw;
+	/* height: 50vh; */
+	border: 1px solid grey;
+	
+	.image-container {
+		/* width: 100vw; */
+		height: 600px;
+		background-image: url('./../../assets/images/Headshot.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

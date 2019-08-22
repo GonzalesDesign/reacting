@@ -1,0 +1,76 @@
+// @import "./../index.scss";
+// @import "./../App.scss";
+
+footer.footer-main-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// width: 90vw; // 100%;
+	border: 0px solid yellowgreen;
+
+	.footer-image {
+		height: 300px;
+		width: 100%;
+		background-image: url('./../assets/images/CityScape.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: center;
+		background-position-y: center;
+
+		.footer-quote {
+			// @include fontFamilyWeightSizeColor( $fontOpenSans, 600, 2em, var(--rlg-color-light));
+			font-family: var(--rlg-font-OpenSans);
+			font-size: 2em;
+			font-style: normal;
+			font-weight: 600;
+			font-kerning: auto;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			text-shadow: var(--rlg-text-shadow-light);
+			color: var(--rlg-color-light);
+			// width: 120px;
+			height: auto;
+			padding: 10px;
+			margin: 100px 0px 0px 0px;
+			// background: rgba(white, .15);
+			line-height: .9;
+			
+
+			border: 0px solid grey;
+
+			@media screen and (min-width: 700px) {
+				flex-direction: row;
+				align-items: center;
+				// height: 150px;
+				// background: linear-gradient(90deg, rgba(white, 0), white);
+				// border: 10px solid rgba(white, .5);
+			}
+
+			q {
+				// @include fontFamilyWeightSizeColor( $fontMerriweather, 300, .7em, var(--rlg-color-light));
+				font-family: var(--rlg-font-Merriweather);
+				font-size: .5em;
+				font-style: normal;
+				font-weight: 300;
+				font-kerning: auto;
+				text-transform: initial;
+				letter-spacing: 0.1em;
+				color: var(--rlg-color-light);
+				border: 0px solid grey;
+			}
+		}
+
+		.footer-social-icons {
+			// @include fontFamilyWeightSizeColor( $fontSocialIcons, 300, 2em, var(--rlg-color-light));
+			font-family: var(--rlg-font-SocialIcons);
+			font-size: 2em;
+			font-style: normal;
+			font-weight: 300;
+			font-kerning: auto;
+			text-transform: initial;
+			color: var(--rlg-color-light);
+			letter-spacing: 20px;
+			margin: 40px 0px 0px 0px;
+		}
+	}
+}

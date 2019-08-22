@@ -1,0 +1,193 @@
+// @import "./../../index.scss";
+// @import "./../../Theme/sharedMixin.scss";
+
+// body {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-content: center;
+// 	align-items: center;
+// 	margin: 0;
+// 	background-attachment: fixed !important;
+// 	min-width: 350px;
+// 	max-width: 922px;
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
+// 	// -webkit-user-select: text;
+// 	//   user-select: text;
+// }
+
+.main-feature-container {
+	display: flex;
+	flex-direction: column;
+	// justify-content: center;
+	align-content: center;
+	align-items: center;
+	// position: relative;
+	position: absolute;
+	width: 100vw;
+	// max-width: 922px; // 100vw;
+	height: 20vh;
+	top: 550px;
+	// overflow: hidden;
+	z-index: 200;
+	border: 0px solid var(--rlg-color-danger);
+
+	.main-feature {
+		// @include fontFamilyWeightSizeColor( $fontOpenSans, 600, .8em, var(--rlg-color-medium-tint) );
+		font-family: var(--rlg-font-OpenSans);
+		font-size: 0.8em;
+		font-style: normal;
+		font-weight: 600;
+		font-kerning: auto;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+		color: var(--rlg-color-medium-tint);
+		width: 90vw;
+		// height: 50vh;
+		padding: 20px 0 0 0;
+		background: white;
+		border: 1px solid grey;
+
+		.main-feature-title {
+			padding: 20px 0 40px 0;
+			// @include fontFamilyWeightSizeColor( $fontOpenSans, 600, 4em, var(--rlg-color-tertiary-tint) );
+			font-family: var(--rlg-font-OpenSans);
+			font-size: 4em;
+			font-style: normal;
+			font-weight: 600;
+			font-kerning: auto;
+			text-transform: uppercase;
+			line-height: 0.9;
+			color: var(--rlg-color-tertiary-tint);
+		}
+
+		.ornaments {
+			// @include fontFamilyWeightSizeColor( $fontBodoniOrnaments, 300, 1em, var(--rlg-color-success-tint2) );
+			font-family: var(
+				--rlg-font-BodoniOrnaments
+			); //$fontBodoniOrnaments; //"bodoniOrnaments";
+			font-size: 1em;
+			font-style: normal;
+			font-weight: 200;
+			font-kerning: auto;
+			text-transform: initial;
+			color: var(--rlg-color-success-tint2);
+		}
+	}
+
+	.main-feature-image-cover {
+		background-color: var(--rlg-color-tertiary-tint);
+	}
+	.main-feature-image {
+		height: 300px;
+		background-image: url("./../../assets/images/MoneyChartBW.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: center;
+		background-position-y: center;
+		opacity: 0.85;
+	}
+	.main-feature-author-container {
+		display: flex;
+		align-content: center;
+		padding: 40px 0px 10px 40px;
+		border: 0px solid red;
+
+		.author-avatar-container {
+			border: 0px solid purple;
+
+			.author-avatar {
+				width: 50px;
+				height: 50px;
+				transform: scale(1.3);
+				// transform: translateY(0px);
+				border-radius: 25px;
+				border: 4px double var(--rlg-color-medium-tint3);
+			}
+		}
+		.author-name-container {
+			padding: 0px 0px 0px 16px;
+
+			.main-feature-author {
+				// @include fontFamilyWeightSizeColor( $fontOpenSans, 400, 1.5em, var(--rlg-color-medium) );
+				font-family: var(--rlg-font-OpenSans);
+				font-size: 1.2em;
+				font-style: normal;
+				font-weight: 600;
+				font-kerning: auto;
+				text-transform: uppercase;
+				// letter-spacing: 0.1em;
+				color: var(--rlg-color-medium);
+				text-align: left;
+				// padding: 0px 0px 0px 16px;
+				line-height: 0.9;
+				border: 0px solid blue;
+			}
+
+			.main-feature-info-date {
+				// @include fontFamilyWeightSizeColor( $fontOpenSans, 400, .9em, var(--rlg-color-medium) );
+				font-family: var(--rlg-font-Merriweather);
+				font-size: 0.9em;
+				font-style: italic;
+				font-weight: 400;
+				font-kerning: auto;
+				text-transform: initial;
+				// letter-spacing: 0.1em;
+				color: var(--rlg-color-medium);
+				text-align: left;
+				padding: 5px 0px 0px 0px;
+				line-height: 0.9;
+				border: 0px solid blue;
+			}
+			.author-social-icons {
+				font-family: var(--rlg-font-SocialIcons);
+				font-size: 1.2em;
+				font-style: normal;
+				font-weight: 300;
+				font-kerning: auto;
+				text-transform: initial;
+				letter-spacing: 5px;
+				color: var(--rlg-color-danger);
+				text-align: left;
+				margin: 5px 0px 0px 0px;
+				border: 0px solid blue;
+			}
+		}
+	}
+
+	.main-feature-info {
+		// @include fontFamilyWeightSizeColor( $fontMerriweather, 300, 1.4em, var(--rlg-color-medium) );
+		font-family: var(--rlg-font-Merriweather);
+		font-size: 1.2em;
+		font-style: normal;
+		font-weight: 300;
+		font-kerning: auto;
+		text-transform: initial;
+		text-align: left;
+		letter-spacing: 0em;
+		color: var(--rlg-color-medium);
+		padding: 10px 40px 10px 40px;
+		column-count: 1;
+
+		@media screen and (min-width: 700px) {
+			column-count: 2;
+		}
+	}
+	.main-feature-airport-network-image {
+		height: 200px;
+		margin: 10px 40px 10px 40px;
+		background-image: url("./../../assets/images/airports-world-network.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: center;
+		background-position-y: center;
+		opacity: 0.75;
+	}
+	// .main-feature-parag-break {
+	// 	height: 200px;
+	// 	width: 300px;
+	// 	margin: 120px 0px 0px 0px;
+	// 	color: red;
+	// 	border: 0px solid red;
+	// }
+}
