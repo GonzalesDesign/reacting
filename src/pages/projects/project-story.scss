@@ -1,0 +1,74 @@
+.projStory-container {
+	display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-content: center;
+	align-items: center;
+	// position: relative;
+	// position: absolute;
+	// width: 100vw;
+	// max-width: 922px; // 100vw;
+	// height: 20vh;
+	// top: 550px;
+	// overflow: hidden;
+	// z-index: 200;
+	border: 10px solid var(--rlg-color-danger);
+	
+	.projStory-row1 {
+		display: flex;
+		// flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		top: 550px;
+		width: 80vw;
+		background-color: white; //var(--rlg-color-light);
+
+		.projStory-image-cover {
+			height: 900px;
+			// width: 100vw;
+			background-image: url("./../../assets/images/Nevess1b.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position-x: center;
+			background-position-y: 200px;
+			opacity: 1;
+			// margin: 0px 20px 0px 20px;
+		}
+
+		.projStory-info {
+			font-family: var(--rlg-font-Merriweather);
+			font-size: 1.2em;
+			font-style: normal;
+			font-weight: 300;
+			font-kerning: auto;
+			text-transform: initial;
+			text-align: left;
+			letter-spacing: 0em;
+			line-height: 2;
+			color: var(--rlg-color-medium);
+			padding: 10px 40px 10px 16px;
+			// column-count: 1;
+
+			@media screen and (min-width: 700px) {
+				// column-count: 2;
+			}
+		}
+		.projStory-title {
+			// @include fontFamilyWeightSizeColor( $fontOpenSans, 600, 4em, var(--rlg-color-tertiary-tint) );
+			font-family: var(--rlg-font-OpenSans);
+			font-size: 2em;
+			font-style: normal;
+			font-weight: 600;
+			font-kerning: auto;
+			text-transform: uppercase;
+			text-align: start;
+			line-height: 0.9;
+			color: var(--rlg-color-tertiary-tint);
+			padding: 50px 0 40px 16px;
+		}
+	}
+
+	.dev-border {
+		border: 0px solid var(--rlg-color-success);
+	}
+}

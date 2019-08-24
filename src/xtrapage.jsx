@@ -1,24 +1,19 @@
 import React from "react";
-import './about.scss'
-// import NavigationComponent from '././../../components/nav';
+import './pages/about/about.scss'
 // import MainFeatureComponent from './main-feature';
 
-export default function AboutComponent() {
+export default function ExtraComponent() {
 
 	return(
 		
 		<React.Fragment>
 
-			{/* <NavigationComponent /> */}
-			
 			<div className="about-main-container">
 
-				<div className="about-image-container">
-					<span className="about-image-title">ABOUT COMPONENT WORKS!</span>
-				</div>
+				<div className="about-image-container">Image Goes Here</div>
 				
 				<div>
-					
+					<h1>ABOUT COMPONENT WORKS!</h1>
 				</div>
 
 			</div>

@@ -1,25 +1,21 @@
 
-.about-main-container {
-	// position: fixed;
+.projects-main-container {
 	width: 100vw;
-	/* height: 50vh; */
 	border: 1px solid grey;
 	
-	.about-image-container {
+	.projects-image-container {
 		display: flex;
 		justify-content: center;
-		// align-content: flex-end;
 		align-items: flex-end;
-		/* width: 100vw; */
-		height: 500px;
-		background-image: url('./../../assets/images/FlowerFace.jpg');
+		height: 600px;
+		background-image: url('./../../assets/images/Void.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position-x: center;
 		background-position-y: center;
 		opacity: 0.85;
 
-		.about-image-title {
+		.projects-image-title {
 			font-family: var(--rlg-font-OpenSans);
 			color: var(--rlg-color-medium);
 			font-size: 2em;

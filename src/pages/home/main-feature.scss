@@ -1,20 +1,3 @@
-// @import "./../../index.scss";
-// @import "./../../Theme/sharedMixin.scss";
-
-// body {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-content: center;
-// 	align-items: center;
-// 	margin: 0;
-// 	background-attachment: fixed !important;
-// 	min-width: 350px;
-// 	max-width: 922px;
-// 	-webkit-font-smoothing: antialiased;
-// 	-moz-osx-font-smoothing: grayscale;
-// 	// -webkit-user-select: text;
-// 	//   user-select: text;
-// }
 
 .main-feature-container {
 	display: flex;
@@ -52,7 +35,7 @@
 			padding: 20px 0 40px 0;
 			// @include fontFamilyWeightSizeColor( $fontOpenSans, 600, 4em, var(--rlg-color-tertiary-tint) );
 			font-family: var(--rlg-font-OpenSans);
-			font-size: 4em;
+			font-size: 3.5em;
 			font-style: normal;
 			font-weight: 600;
 			font-kerning: auto;
@@ -165,6 +148,7 @@
 		text-transform: initial;
 		text-align: left;
 		letter-spacing: 0em;
+		line-height: 2;
 		color: var(--rlg-color-medium);
 		padding: 10px 40px 10px 40px;
 		column-count: 1;
@@ -174,7 +158,7 @@
 		}
 	}
 	.main-feature-airport-network-image {
-		height: 200px;
+		height: 350px;
 		margin: 10px 40px 10px 40px;
 		background-image: url("./../../assets/images/airports-world-network.jpg");
 		background-repeat: no-repeat;
@@ -182,6 +166,20 @@
 		background-position-x: center;
 		background-position-y: center;
 		opacity: 0.75;
+
+		.image-description {
+			font-family: var(--rlg-font-Merriweather);
+			font-size: 1.2em;
+			font-style: italic;
+			font-weight: 300;
+			font-kerning: auto;
+			text-transform: initial;
+			text-align: left;
+			letter-spacing: 0em;
+			color: var(--rlg-color-light);
+			padding: 10px 0px 10px 16px;
+			background-color: var(--rlg-color-dark); //rgba(var(--rlg-color-dark), 1);
+		}
 	}
 	// .main-feature-parag-break {
 	// 	height: 200px;

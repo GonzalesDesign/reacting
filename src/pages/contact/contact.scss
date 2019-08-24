@@ -1,0 +1,18 @@
+
+.contact-main-container {
+	// position: fixed;
+	width: 100vw;
+	/* height: 50vh; */
+	border: 1px solid grey;
+	
+	.contact-image-container {
+		/* width: 100vw; */
+		height: 600px;
+		background-image: url('./../../assets/images/Hello.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: center;
+		background-position-y: center;
+		opacity: 0.85;
+	}
+}

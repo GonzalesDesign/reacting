@@ -5,9 +5,10 @@ import Avatar from './../../assets/images/avatar/Bruce.jpg'
 
 export default function MainFeatureComponent() {
 	
-	const devStyle = {
-		border: "1px solid var(--rlg-color-success)"
-	}
+	/*---=| for dev only! |=---*/
+	// const devStyle = {
+	// 	border: "1px solid var(--rlg-color-success)"
+	// }
 
 	return (
 		<React.Fragment>
@@ -22,7 +23,8 @@ export default function MainFeatureComponent() {
 					{/*----=| componentize |=----*/}
 					<div className="main-feature-author-container">
 						<div className="author-avatar-container">
-							<img src={Avatar} className="author-avatar" />
+							<img src={Avatar} className="author-avatar"
+							alt="Author's Avatar"/>
 						</div>
 						<div className="author-name-container">
 							<div className="main-feature-author">R.Lloyd Gonzales</div>
@@ -47,7 +49,10 @@ export default function MainFeatureComponent() {
 						veniam officia tempora, debitis vero voluptates nulla alias,
 						incidunt tempore ipsa perspiciatis!
 						</p>
-						<div className="main-feature-airport-network-image"></div>
+						<div className="main-feature-airport-network-image">
+							<p className="image-description">Javacript frameworks global clusters</p>
+						</div>
+						
 					{/* <br/><br/><span className="main-feature-parag-break"></span> */}
 						<p className="main-feature-info">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
