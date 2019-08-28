@@ -1,5 +1,6 @@
 import React from "react";
 import './contact.scss'
+import ContactFeatureComponent from './contact-feature'
 // import MainFeatureComponent from './main-feature';
 
 export default function ContactComponent() {
@@ -10,13 +11,17 @@ export default function ContactComponent() {
 
 			<div className="contact-main-container">
 
-				<div className="contact-image-container"><h1>CONTACT COMPONENT WORKS!</h1></div>
-				
-				<div>
-					
+				<div className="contact-image-container">
+					<span className="contact-image-title">CONTACT COMPONENT WORKS!</span>
 				</div>
+				
+				{/* <div className="devBorder">
+					<ContactFeatureComponent/>
+				</div> */}
 
 			</div>
+
+			<ContactFeatureComponent/>
 
 			{/*---= Element: Main Feature Component =---*/}
 			{/* <MainFeatureComponent/> */}

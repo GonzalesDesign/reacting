@@ -14,6 +14,7 @@ export default function ProjectsComponent() {
 				<div className="projects-image-container">
 					<span className="projects-image-title">PROJECTS COMPONENT WORKS!</span>
 				</div>
+				
 			</div>
 
 			{/* ---= Element: ProjectStoryComponent =--- */}

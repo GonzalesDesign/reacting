@@ -1,6 +1,7 @@
 import React from "react";
 import "./project-story.scss";
 import { Container, Row, Col } from "react-bootstrap";
+import FooterComponent from './../../components/footer';
 // import { Container, Row, Col, Button } from "reactstrap";
 // import 'bootstrap/dist/css/bootstrap.css';
 
@@ -34,6 +35,11 @@ import { Container, Row, Col } from "react-bootstrap";
 							incidunt tempore ipsa perspiciatis!
 							</p>
 						</Col>
+
+						<Col xs={12} className="projStory-footer">
+							<FooterComponent />
+						</Col>
+
 					</Row>
 					
 				</Container>

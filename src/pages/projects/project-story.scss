@@ -22,6 +22,7 @@
 		top: 550px;
 		width: 80vw;
 		background-color: white; //var(--rlg-color-light);
+		border-top: 10px solid var(--rlg-color-danger);
 
 		.projStory-image-cover {
 			height: 900px;
@@ -49,9 +50,13 @@
 			padding: 10px 40px 10px 16px;
 			// column-count: 1;
 
-			@media screen and (min-width: 700px) {
+			@media screen and (max-width: 700px) {
 				// column-count: 2;
+				font-size: 1em;
 			}
+		}
+		.projStory-footer {
+			padding: 0px;
 		}
 		.projStory-title {
 			// @include fontFamilyWeightSizeColor( $fontOpenSans, 600, 4em, var(--rlg-color-tertiary-tint) );
@@ -65,6 +70,11 @@
 			line-height: 0.9;
 			color: var(--rlg-color-tertiary-tint);
 			padding: 50px 0 40px 16px;
+			
+			@media screen and (max-width: 700px) {
+				// column-count: 2;
+				font-size: 1.5em;
+			}
 		}
 	}
 

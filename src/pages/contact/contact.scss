@@ -6,7 +6,9 @@
 	border: 1px solid grey;
 	
 	.contact-image-container {
-		/* width: 100vw; */
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
 		height: 600px;
 		background-image: url('./../../assets/images/Hello.jpg');
 		background-repeat: no-repeat;
@@ -14,5 +16,19 @@
 		background-position-x: center;
 		background-position-y: center;
 		opacity: 0.85;
+
+		.contact-image-title {
+			font-family: var(--rlg-font-OpenSans);
+			color: var(--rlg-color-medium);
+			font-size: 2em;
+			font-style: normal;
+			font-weight: 600;
+			font-kerning: auto;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			line-height: 1;
+			padding-bottom: 100px;
+		}
+
 	}
 }

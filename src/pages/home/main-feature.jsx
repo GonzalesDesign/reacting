@@ -1,10 +1,9 @@
 import React from "react";
 import FooterComponent from "../../components/footer";
 import "./main-feature.scss";
-import Avatar from './../../assets/images/avatar/Bruce.jpg'
+import Avatar from "./../../assets/images/avatar/Bruce.jpg";
 
 export default function MainFeatureComponent() {
-	
 	/*---=| for dev only! |=---*/
 	// const devStyle = {
 	// 	border: "1px solid var(--rlg-color-success)"
@@ -14,17 +13,20 @@ export default function MainFeatureComponent() {
 		<React.Fragment>
 			<div className="main-feature-container">
 				<div className="main-feature">
-					<span className="ornaments">†</span> Main Feature <span className="ornaments">¢</span>
+					<span className="ornaments">†</span> Main Feature{" "}
+					<span className="ornaments">¢</span>
 					<div className="main-feature-title">UI Design & Development</div>
 					<div className="main-feature-image-cover">
 						<div className="main-feature-image" />
 					</div>
-
 					{/*----=| componentize |=----*/}
 					<div className="main-feature-author-container">
 						<div className="author-avatar-container">
-							<img src={Avatar} className="author-avatar"
-							alt="Author's Avatar"/>
+							<img
+								src={Avatar}
+								className="author-avatar"
+								alt="Author's Avatar"
+							/>
 						</div>
 						<div className="author-name-container">
 							<div className="main-feature-author">R.Lloyd Gonzales</div>
@@ -32,29 +34,29 @@ export default function MainFeatureComponent() {
 							<div className="author-social-icons">ftv`_3</div>
 						</div>
 					</div>
-
 					<p className="main-feature-info">
-						React Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-						architecto animi natus recusandae consequuntur nisi saepe minima in,
-						eaque tenetur dolore amet assumenda distinctio fugit dolorum, quidem
-						reprehenderit corrupti perferendis. Corporis, dolor natus! At atque
-						rem eos ducimus voluptatum doloribus natus, alias quaerat aspernatur
-						eligendi voluptas aliquam sunt rerum sit libero sequi sapiente
-						dicta. Quae accusantium cupiditate, ut dolor debitis labore et autem
-						dolorum eius fuga animi cumque recusandae architecto at earum dolore
-						suscipit nulla unde quam expedita soluta iure aliquid officiis!
-						Excepturi, incidunt! Eius adipisci est ipsum. Architecto,
-						perspiciatis earum odit, fugit optio nulla magni autem hic quod
-						perferendis quia distinctio assumenda. Quae ullam similique in a
-						veniam officia tempora, debitis vero voluptates nulla alias,
+						React Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Quibusdam architecto animi natus recusandae consequuntur nisi saepe
+						minima in, eaque tenetur dolore amet assumenda distinctio fugit
+						dolorum, quidem reprehenderit corrupti perferendis. Corporis, dolor
+						natus! At atque rem eos ducimus voluptatum doloribus natus, alias
+						quaerat aspernatur eligendi voluptas aliquam sunt rerum sit libero
+						sequi sapiente dicta. Quae accusantium cupiditate, ut dolor debitis
+						labore et autem dolorum eius fuga animi cumque recusandae architecto
+						at earum dolore suscipit nulla unde quam expedita soluta iure
+						aliquid officiis! Excepturi, incidunt! Eius adipisci est ipsum.
+						Architecto, perspiciatis earum odit, fugit optio nulla magni autem
+						hic quod perferendis quia distinctio assumenda. Quae ullam similique
+						in a veniam officia tempora, debitis vero voluptates nulla alias,
 						incidunt tempore ipsa perspiciatis!
+					</p>
+					<div className="main-feature-airport-network-image">
+						<p className="image-description">
+							Javacript frameworks global clusters
 						</p>
-						<div className="main-feature-airport-network-image">
-							<p className="image-description">Javacript frameworks global clusters</p>
-						</div>
-						
+					</div>
 					{/* <br/><br/><span className="main-feature-parag-break"></span> */}
-						<p className="main-feature-info">
+					<p className="main-feature-info">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
 						impedit dicta doloribus repellat earum hic similique cum quae error
 						sunt eius dolorum magni modi laudantium minima autem sequi iure
@@ -84,8 +86,10 @@ export default function MainFeatureComponent() {
 						possimus voluptas ea nulla harum labore nemo corrupti similique
 						sequi maxime doloremque incidunt?
 					</p>
-					<FooterComponent />
 				</div>
+
+				<FooterComponent />
+				
 			</div>
 		</React.Fragment>
 	);

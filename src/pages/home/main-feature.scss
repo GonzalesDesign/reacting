@@ -6,11 +6,11 @@
 	align-content: center;
 	align-items: center;
 	// position: relative;
-	position: absolute;
+	position: relative; // absolute;
+	top: -50px;
 	width: 100vw;
 	// max-width: 922px; // 100vw;
 	height: 20vh;
-	top: 550px;
 	// overflow: hidden;
 	z-index: 200;
 	border: 0px solid var(--rlg-color-danger);
@@ -25,7 +25,7 @@
 		text-transform: uppercase;
 		letter-spacing: 1.4px;
 		color: var(--rlg-color-medium-tint);
-		width: 90vw;
+		width: 70vw;
 		// height: 50vh;
 		padding: 20px 0 0 0;
 		background: white;

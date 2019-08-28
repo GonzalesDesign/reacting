@@ -1,31 +1,31 @@
+
+
 import React from "react";
-import './about.scss'
-// import NavigationComponent from '././../../components/nav';
-// import MainFeatureComponent from './main-feature';
+import "./about.scss";
+import InspirationalComponent from './inspirational';
 
 export default function AboutComponent() {
-
-	return(
-		
+	
+	return (
 		<React.Fragment>
+			{/* <div onChange="{fGetConcept()}"></div> */}
 
-			{/* <NavigationComponent /> */}
-			
 			<div className="about-main-container">
-
 				<div className="about-image-container">
-					<span className="about-image-title">ABOUT COMPONENT WORKS!</span>
+					<span className="about-image-title">
+						INSPIRATIONAL THOUGHTS APP
+						<div className="react-version">
+							<p>Admin: Built with Angular7 & Ionic4</p>
+							<p>Viewing using React {React.version}</p>
+						</div>
+					</span>
 				</div>
-				
-				<div>
-					
-				</div>
+
+				{/*---=| Show InspirationalComponent |=---*/}
+				<InspirationalComponent/>
 
 			</div>
-
-			{/*---= Element: Main Feature Component =---*/}
-			{/* <MainFeatureComponent/> */}
-
+			
 		</React.Fragment>
-	)
+	);
 }

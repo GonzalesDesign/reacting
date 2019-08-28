@@ -35,12 +35,14 @@ nav.navigation-main-container {
 		// padding: 6px;
 		margin-left: 40px;
 		// @include fontFamilyWeightSizeColor( $fontRye, 600, 2em, var(--rlg-color-light) );
-		font-family: var(--rlg-font-Rye);
-		font-size: 2em;
+		// font-family: var(--rlg-font-Rye);
+		font-family: var(--rlg-font-SocialIcons);
+		font-size: 4em;
 		font-style: normal;
 		font-weight: 600;
 		font-kerning: auto;
-		color: var(--rlg-color-light);
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+		color: var(--rlg-color-success-tint2);
 
 		border: 0px solid grey;
 	}
