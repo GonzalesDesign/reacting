@@ -1,6 +1,7 @@
 import firebase from "firebase";
 // import * as firebase from 'firebase';
 // import firebase from 'firebase/database';
+// import 'firebase/database';
 
 const firebaseApp = firebase.initializeApp({
   // copy and paste your firebase credential here

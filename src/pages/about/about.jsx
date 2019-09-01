@@ -15,7 +15,7 @@ export default function AboutComponent() {
 					<span className="about-image-title">
 						INSPIRATIONAL THOUGHTS APP
 						<div className="react-version">
-							<p>Admin: Built with Angular7 & Ionic4</p>
+							<p>CRUD: Built with Angular7 • Ionic4 • Firebase Cloud Firestore</p>
 							<p>Viewing using React {React.version}</p>
 						</div>
 					</span>

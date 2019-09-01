@@ -1,0 +1,86 @@
+.resume-main-container {
+	border: 0px solid grey;
+
+	.resume-container {
+		padding: 120px 0px 0px 0px;
+		border: 0px solid grey;
+
+		.resume-profession {
+			border: 0px solid grey;
+		}
+
+		.resume-address {
+			font-family: var(--rlg-font-OpenSans);
+			color: var(--rlg-color-medium);
+			font-size: 1em;
+			font-style: normal;
+			font-weight: 400;
+			font-kerning: auto;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			line-height: 1;
+			padding-bottom: 20px;
+			// text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+			border: 0px solid grey;
+		}
+
+		.resume-li-container {
+			list-style: none;
+
+			.resume-experienced {
+				display: flex;
+				flex-direction: row;
+				font-family: var(--rlg-font-OpenSans);
+				color: var(--rlg-color-medium);
+				font-size: 1em;
+				font-style: normal;
+				font-weight: 600;
+				font-kerning: auto;
+				// text-transform: uppercase;
+				letter-spacing: 0.1em;
+				line-height: 1;
+				padding: 16px 0px 50px 0px;
+				border-top: 1px solid var(--rlg-color-medium-tint2);
+				@media screen and (max-width: 500px) {
+					flex-direction: column;
+				};
+				// border: 0px solid cyan;
+
+				.resume-title {
+					text-align: right;
+					padding: 0px 16px 20px 0px;
+					width: 40%;
+					text-transform: uppercase;
+					// text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+					border-right: 1px solid var(--rlg-color-medium-tint2);
+					@media screen and (max-width: 500px) {
+						width: 100%;
+						text-align: center;
+						border-right: 0px solid var(--rlg-color-medium-tint2);
+					};
+				}
+				.resume-description {
+					text-align: left;
+					padding: 0px 0px 0px 16px;
+					width: 60%;
+					font-family: var(--rlg-font-Merriweather);
+					text-transform: initial;
+					font-weight: 300;
+					letter-spacing: 0em;
+					line-height: 1.2;
+					// text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+					border: 0px solid grey;
+					@media screen and (max-width: 500px) {
+						width: 100%;
+						text-align: center;
+					};
+				}
+			}
+		}
+	}
+}
+
+/*--=| Carriage return in textarea |=--*/
+.multi_lines_text {
+	white-space: pre-line;
+}

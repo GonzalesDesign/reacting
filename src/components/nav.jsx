@@ -45,7 +45,7 @@ export default function NavigationComponent() {
 
 					<ul className="navigation-container">
 						{menus.map((data, indx) => {
-							console.log("data: ", data.name, " | ", "indx: ", indx);
+							// console.log("data: ", data.name, " | ", "indx: ", indx);
 
 							return (
 								<li key={indx} className="navigation-menu">
@@ -56,7 +56,8 @@ export default function NavigationComponent() {
 					</ul>
 				</nav>
 				
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense fallback={<div>Loading...</div>}> {/* MoonLoader */}
+
 					<Switch>
 						<Route exact path="/" component={ContentComponent} />
 						<Route path="/pages/about/" component={AboutComponent} />

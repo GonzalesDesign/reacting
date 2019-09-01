@@ -106,7 +106,7 @@ nav.navigation-main-container {
 		// 	// background-color: yellow;
 		// }
 		&:hover {
-			background: var(--rlg-color-primary-tint4);
+			background: rgba(var(--rlg-color-success-rgb), .25);
 		}
 
 		a {

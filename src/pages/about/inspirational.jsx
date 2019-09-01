@@ -2,66 +2,82 @@
 * Project: Learning ReactJS
 * Contact: rolandolloyd@gmail.com
 * Copyright © 2019 GonzalesDesign
-* Version: 19.08.26
+* Version: 19.08.31
 * Notes: Using React's useState, useEffect accessing
 			Inspirational App running on Firebase Cloud.
 			Built in Angular7 & Ionic4, Inspirational app
 			is a CRUD application.
 *****************************************************/
 
-import React from 'react';
-import './about.scss';
-import './inspirational.scss';
-import { useFirebaseDoc } from './../../services/hooks-firebase'
-import FooterComponent from '../../components/footer';
-
+import React, { Suspense, useState, useEffect } from "react";
+import { useFirebaseDoc } from "./../../services/hooks-firebase";
+// import { useFirebaseCollection } from "../../services/hooks-FBCollection";
+import "./inspirational.scss";
+import FooterComponent from "../../components/footer";
 
 export default function InspirationalComponent() {
 
-	/*---=| Using Firebase Hooks: Single Random Doc |=---*/
-	const concept = useFirebaseDoc('concept', [])
+	//helper function: ---------------------------------=======:randomizer
+	const fGetRandomInt = (max) => {
+		const randNum = Math.floor(Math.random() * Math.floor(max));
+		return randNum;
+	};
 
-	/////////??????????????????????????//////////// NOT WORKING!
-	const FBDoc = () => {
-		concept = useFirebaseDoc('concept', concept)
+	//---------------------------------------------------------=======:db
+	/*---=| useFirebaseDoc: onSnapshot() |=---*/
+	const conceptCollection = useFirebaseDoc("concept", [1]);
+	// console.log("conceptCollection: ", conceptCollection);
+	
+	/*---=| useFirebaseCollection: querySnapshot() |=---*/
+	// const conceptCollection = useFirebaseCollection("concept", [1]);
+	// console.log("conceptCollection: ", conceptCollection);
+
+	//---------------------------------------------------------=======:setter
+	const [randCon, setRandCon] = useState([conceptCollection]);
+	useEffect(() => {
+		const randNum = fGetRandomInt(conceptCollection.length);
+		const randCollection = conceptCollection[randNum];
+		// fGetRandomInt(conceptCollection.length, conceptCollection);
+		setRandCon(randCollection);
+	}, [conceptCollection]);
+
+	//---------------------------------------------------------=======:onClick
+	const fRandomConcept = () => {
+		const randNum = fGetRandomInt(conceptCollection.length);
+		const randCollection = conceptCollection[randNum];
+		// console.log("randCollection: ", randCollection);
+		setRandCon(randCollection);
 	}
+	
 
+	//---------------------------------------------------------=======:jsx
 	return (
 		<React.Fragment>
-			
-			{/*---=| show Concept: single doc |=---*/}
-			<div className='concept-main-container'>
-				<div key={concept.id} className='concept-container'>
-					<div className='concept-title'>{concept.title}</div>
-					<div className='concept-notes'>{concept.notes}</div>
-					<div className='concept-author'>{concept.author}</div>
 
-					<button onClick={FBDoc} className='button-random'>RANDOM QUOTE</button>
+			{/*---=| main-container: 100vw |=---*/}
+			<div className="concept-main-container">
 
-					{/* <br/> */}
-					
-					{/* <h1 style={{color:'red', textTransform:'uppercase'}}>titolo</h1> */}
-					{/* <div className='concept-title'>{title}</div>
-					<div className='concept-author'>{author}</div> */}
-					{/* <h2>{title}</h2>
-					<h2>{author}</h2> */}
+				{/*---=| show Concept: single doc from the concept collection |=---*/}
+				<Suspense fallback={<div className="loading">Loading...</div>}>
+					<div key={randCon.id} className="concept-container">
 
-					{/* <div
-						className='concept-bgImage'
-						style={{ backgroundImage: `url(${concept.bgImage})` }}
-					>
-						{concept.bgImage}
-					</div> */}
-					{/* <img src='./../../assets/images/inspirational/woman.jpg' alt='woman' className='img-src'/> */}
+						<div className="concept-title">{randCon.title}</div>
+						<div className="concept-notes multi_lines_text">{randCon.notes}</div>
+						<div className="concept-author">{randCon.author}</div>
+						
+						<br/>
+						<br/>
 
-					{/* <div className='concept-bgImage'></div> */}
-
-				</div>
+						<button className="button-random" onClick={fRandomConcept}>RANDOM QUOTE</button> <br />
+					</div>
+				</Suspense>
 
 			</div>
 
 			<FooterComponent />
+
 		</React.Fragment>
+
 	);
 }
 

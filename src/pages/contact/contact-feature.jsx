@@ -2,12 +2,24 @@
 import React from "react";
 import "./contact-feature.scss";
 import FooterComponent from "./../../components/footer";
+import { ResumeComponent } from './resume';
+import { ContactFormComponent } from './contact-form';
+// import { useCounter, Counter } from '../../services/counter';
 
-const fHandleSubmit = () => {
-	console.log('Handle Submit');
-}
+
+
 
 export default function ContactFeatureComponent() {
+
+	const devStyle = {
+		border: "1px solid var(--rlg-color-success)"
+	}
+
+	// const counter = useCounter(0, 3);
+	// console.log('counter: ', counter);
+
+	
+
 	return (
 		<React.Fragment>
 			<div className="contact-feature-main-container">
@@ -17,51 +29,51 @@ export default function ContactFeatureComponent() {
 					<div className="contact-feature-intro-container">
 						<div className="left-container">
 							<div className="left-column-info">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Numquam, accusantium!
+								A designer who codes. <br/>
+								Self-motivated, independent, detail-oriented and responsible team-player.
+
+								{/* =--------------------------------------------------=:counter test */}
+								{/* <div className="counter">{counter}</div> */}
+								{/* <Counter /> */}
+
+							</div>
+
+
+						</div>
+
+						<div className="right-container">
+							<div className="header">R.Lloyd Gonzales</div>
+							<div className="position">UI Designer | Developer</div>
+							<div className="info"> <span className="info-label"> ~ Tools of the trade ~ </span> <br/>	
+								Photoshop • Illustrator <br/> HTML • CSS • Javascript <br/> Angular • Ionic • React
 							</div>
 						</div>
-						<div className="right-container" />
-					</div>
 
+					</div>
+					
+					{/* =--------------------------------------------------=:resume */}
+					<ResumeComponent />
+					
+					{/* //=-------------------------------------=:three columns */}
 					<div className="three-columns-container">
 						<div className="one-three" />
 						<div className="two-three" />
 						<div className="three-three" />
 					</div>
 
-					<div className="form-label">Email Us:</div>
+					{/* //=-------------------------------------=:form */}
+					<ContactFormComponent />
 
-					<form action="" className="form-container">
-						{/* <hr/> */}
-						<input type="text" placeholder="Name:" className="form-input" />
-						{/* <hr/> */}
-						<input type="text" placeholder="Address:" className="form-input" />
-						<input type="text" placeholder="Email::" className="form-input" />
-						<input
-							type="text"
-							placeholder="Phone Number:"
-							className="form-input"
-						/>
-						{/* <hr/> */}
-						<button className="email-submit-button">Submit</button>
-					</form>
-
-					{/* ///////////////////////////////////////////?????????????? */}
-					<form onSubmit={fHandleSubmit}>
-						<label>Name:
-							<input type="text" name="name" />
-						</label>
-						<br/>
-						<input type="submit" value="Submit" />
-					</form>
+					
 
 
 				</div>
 
 				{/*---= Element: Footer Component =---*/}
-				<FooterComponent className="contact-footer" />
+				{/* <FooterComponent className="contact-footer" /> */}
 			</div>
+				{/*---= Element: Footer Component =---*/}
+				<FooterComponent className="contact-footer" />
 		</React.Fragment>
 	);
 }
