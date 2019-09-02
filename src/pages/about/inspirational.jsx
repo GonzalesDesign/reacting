@@ -13,7 +13,7 @@ import React, { Suspense, useState, useEffect } from "react";
 import { useFirebaseDoc } from "./../../services/hooks-firebase";
 // import { useFirebaseCollection } from "../../services/hooks-FBCollection";
 import "./inspirational.scss";
-import FooterComponent from "../../components/footer";
+// import FooterComponent from "../../components/footer";
 
 export default function InspirationalComponent() {
 
@@ -74,7 +74,7 @@ export default function InspirationalComponent() {
 
 			</div>
 
-			<FooterComponent />
+			{/* <FooterComponent /> */}
 
 		</React.Fragment>
 

@@ -24,3 +24,5 @@ export default function FooterComponent() {
 		</React.Fragment>
 	)
 }
+
+// export default FooterComponent;

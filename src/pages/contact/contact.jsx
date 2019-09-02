@@ -2,6 +2,8 @@ import React from "react";
 import './contact.scss'
 import ContactFeatureComponent from './contact-feature'
 // import MainFeatureComponent from './main-feature';
+// import ResumeComponent from './resume';
+import FooterComponent from './../../components/footer';
 
 export default function ContactComponent() {
 
@@ -23,8 +25,14 @@ export default function ContactComponent() {
 
 			<ContactFeatureComponent/>
 
+			{/* <ResumeComponent /> */}
+
 			{/*---= Element: Main Feature Component =---*/}
 			{/* <MainFeatureComponent/> */}
+
+			{/*---= Element: Footer Component =---*/}
+			{/* <FooterComponent className="contact-footer" /> */}
+			<FooterComponent />
 
 		</React.Fragment>
 	)

@@ -1,24 +1,13 @@
 // import React, { useState, useEffect } from "react";
 import React from "react";
 import "./contact-feature.scss";
-import FooterComponent from "./../../components/footer";
-import { ResumeComponent } from './resume';
-import { ContactFormComponent } from './contact-form';
+import ResumeComponent from './resume';
+import HooksFormComponent from './hooks-form';
+// import { ContactFormComponent } from './contact-form';
 // import { useCounter, Counter } from '../../services/counter';
-
-
-
+// import {FooterComponent} from "./../../components/footer";
 
 export default function ContactFeatureComponent() {
-
-	const devStyle = {
-		border: "1px solid var(--rlg-color-success)"
-	}
-
-	// const counter = useCounter(0, 3);
-	// console.log('counter: ', counter);
-
-	
 
 	return (
 		<React.Fragment>
@@ -37,7 +26,6 @@ export default function ContactFeatureComponent() {
 								{/* <Counter /> */}
 
 							</div>
-
 
 						</div>
 
@@ -62,18 +50,18 @@ export default function ContactFeatureComponent() {
 					</div>
 
 					{/* //=-------------------------------------=:form */}
-					<ContactFormComponent />
+					<HooksFormComponent />
 
-					
-
+					{/* <ContactFormComponent /> */}
 
 				</div>
 
-				{/*---= Element: Footer Component =---*/}
-				{/* <FooterComponent className="contact-footer" /> */}
 			</div>
-				{/*---= Element: Footer Component =---*/}
-				<FooterComponent className="contact-footer" />
+			
+			{/*---= Element: Footer Component =---*/}
+			{/* <FooterComponent className="contact-footer" /> */}
+			{/* <FooterComponent /> */}
+				
 		</React.Fragment>
 	);
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./resume.scss";
 import ResumeData from "./../../assets/data/experience-data.json";
 
-export function ResumeComponent() {
+export default function ResumeComponent() {
 	return (
 		<React.Fragment>
 			{ResumeData.map((data, indx) => {
@@ -51,7 +51,7 @@ export function ResumeComponent() {
 										</div>
 										{/* <a href={item.image}>{item.title}</a> */}
 									</li>
-								))}{" "}
+								))}
 								<br />
 								<br />
 							</ul>
