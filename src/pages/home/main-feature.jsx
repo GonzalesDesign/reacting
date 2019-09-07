@@ -1,5 +1,5 @@
 import React from "react";
-import FooterComponent from "./../../components/footer";
+// import FooterComponent from "./../../components/footer";
 import "./main-feature.scss";
 import Avatar from "./../../assets/images/avatar/Bruce.jpg";
 
@@ -88,7 +88,7 @@ export default function MainFeatureComponent() {
 					</p>
 				</div>
 
-				<FooterComponent />
+				{/* <FooterComponent /> */}
 				
 			</div>
 		</React.Fragment>

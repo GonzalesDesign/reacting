@@ -38,7 +38,7 @@ export function ContactFormComponent({ onChange, value }) {
 				<input type="text" placeholder="Name:" className="form-input" />
 				{/* <hr/> */}
 				<input type="text" placeholder="Address:" className="form-input" />
-				<input type="text" placeholder="Email::" className="form-input" />
+				<input type="email" placeholder="Email::" className="form-input" />
 				<input type="text" placeholder="Phone Number:" className="form-input" />
 				{/* <hr/> */}
 				<button className="email-submit-button">Submit</button>

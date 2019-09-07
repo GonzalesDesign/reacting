@@ -1,7 +1,7 @@
 
 .projects-main-container {
 	width: 100vw;
-	border: 1px solid grey;
+	border: 0px solid grey;
 	
 	.projects-image-container {
 		display: flex;
@@ -28,4 +28,15 @@
 			padding-bottom: 100px;
 		}
 	}
+}
+
+.project-other-component {
+	display: inline-flex;
+	flex-direction: column;
+	width: 70vw;
+	position: relative;
+	top: -50px;
+	box-shadow: 4px 6px 10px rgba(black, .1);
+	border-radius: 6px;
+	// border: 1px solid white;
 }

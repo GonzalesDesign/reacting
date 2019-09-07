@@ -32,7 +32,7 @@ export default function ContactComponent() {
 
 			{/*---= Element: Footer Component =---*/}
 			{/* <FooterComponent className="contact-footer" /> */}
-			<FooterComponent />
+			{/* <FooterComponent /> */}
 
 		</React.Fragment>
 	)

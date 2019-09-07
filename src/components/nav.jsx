@@ -9,7 +9,7 @@
 
 // import React from "react";
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink, Switch } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import { Container, Row, Col } from 'react-bootstrap';
 import "./nav.scss";
@@ -30,7 +30,7 @@ export default function NavigationComponent() {
 	/*----------=| State |=----------*/
 	// const menu = ['Home', 'About', 'Projects', 'Contact'];
 	const menus = [
-		{ id: "n0", name: "Home", 		urlLink: "/" },
+		{ id: "n0", name: "Home", 		urlLink: "/pages/home" },
 		{ id: "n1", name: "About", 	urlLink: "/pages/about" },
 		{ id: "n2", name: "Projects", urlLink: "/pages/projects" },
 		{ id: "n3", name: "Contact", 	urlLink: "/pages/contact" }
@@ -41,7 +41,7 @@ export default function NavigationComponent() {
 		<Router>
 			<div>
 				<nav className="navigation-main-container">
-					<div className="logo">S</div>
+					<div className="logo">V</div>
 
 					<ul className="navigation-container">
 						{menus.map((data, indx) => {
@@ -49,20 +49,21 @@ export default function NavigationComponent() {
 
 							return (
 								<li key={indx} className="navigation-menu">
-									<Link to={data.urlLink}> {data.name} </Link>
+									<NavLink to={data.urlLink} activeClassName='selected'> {data.name} </NavLink>
 								</li>
 							);
 						})}
 					</ul>
 				</nav>
 				
-				<Suspense fallback={<div>Loading...</div>}> {/* MoonLoader */}
+				<Suspense fallback={<div>LOADING...</div>}> {/* MoonLoader */}
 
 					<Switch>
-						<Route exact path="/" component={ContentComponent} />
+						{/* <Route exact path="/" component={ContentComponent} /> */}
 						<Route path="/pages/about/" component={AboutComponent} />
 						<Route path="/pages/projects/" component={ProjectsComponent} />
 						<Route path="/pages/contact/" component={ContactComponent} />
+						<Route path="/*" component={ContentComponent} />
 					</Switch>
 				</Suspense>
 			</div>

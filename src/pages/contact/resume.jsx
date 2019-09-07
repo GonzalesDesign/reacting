@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./resume.scss";
 import ResumeData from "./../../assets/data/experience-data.json";
 
 export default function ResumeComponent() {
+	const [display, setDisplay] = useState(true);
+
+	const fDisplayLinks = (condition, elem) => {
+		// useEffect((condition, elem) => {
+		if (condition) {
+			// setDisplay(condition)
+			// console.log("item.displaySite: x: ", condition);
+			// console.log("element: ", elem);
+			// return elem
+
+			// 		// return <h1>{setDisplay(true)}</h1>;
+		}
+		// console.log("item.displaySite: x: ", condition);
+		// console.log("item.displaySite: nada");
+		return null;
+
+		// }, [])
+	};
+
+	// useEffect(() => {
+	// 	// const randNum = fGetRandomInt(conceptCollection.length);
+	// 	// const randCollection = conceptCollection[randNum];
+	// 	// // fGetRandomInt(conceptCollection.length, conceptCollection);
+	// 	// setRandCon(randCollection);
+	// }, [conceptCollection]);
+
 	return (
 		<React.Fragment>
+
 			{ResumeData.map((data, indx) => {
-				// const {address} = data.address;
-				console.log("data: ", data);
+				const {address} = data.address;
+				// console.log("data: ", data);
 				// console.log("data.portfolio[1].image: ", data.portfolio[1].image);
 				// console.log("indx: ", indx);
 				// {data.portfolio[1]}
@@ -47,11 +74,81 @@ export default function ResumeComponent() {
 									<li key={item.id + "port"} className="resume-li-container">
 										<div className="resume-experienced">
 											<div className="resume-title"> {item.title} </div>
-											<div className="resume-description multi_lines_text"> {item.description} </div>
+											<div className="resume-description multi_lines_text">
+												{item.description}
+
+												<div className="resume-framework-links">
+													
+													{item.displaySite && (
+														<div>
+															{item.frameworksSite.map(site => (
+																<div key={site.id + "site"} className="framework-container">
+																	<a href={site.url} target="_blank" rel="noopener noreferrer">
+																	<span  className="framework-title">{site.title}</span> <br/>
+																	<span  className="framework-subtitle">{site.subTitle}</span>
+																	
+																	</a>
+																</div>
+															))}
+														</div>
+													)}
+
+													<br/>
+
+													<div style={{ display: item.displaySite ? 'block' : 'none'}} className="display-inline">
+														<h2>Show if true</h2>
+														<p>using inline style display</p>
+													</div>
+												</div>
+
+											</div>
+											{/* <div>
+											{item.displaySite && (
+												<div>
+													{item.frameworksSite.map(site => (
+														<div key={site.id + "site"}>
+															{site.title}
+														</div>
+													))}
+												</div>
+											)}
+											</div> */}
+
+											{/* x: { if (item.displaySite) { }} */}
+
+											{/* {console.log('item.displaySite: ', item.displaySite)} */}
+											{/* <div>{fDisplayLinks(item.displaySite, item.title)}</div> */}
 										</div>
+
+										<div>
+											{/* onChange={fDisplayLinks(item.displaySite, item.frameworksSite)}> */}
+											{fDisplayLinks(item.displaySite, item.frameworksSite)}
+											{/* {item.frameworksSite.map(site => (
+												<div key={site.id+"site"}>x: {site.id+"pwa"}{site.title}</div>
+											))} */}
+											{/* {item.frameworksSite} */}
+											{/* {item.frameworksSite.title} */}
+											{/* x: {display.title} */}
+											{/* display: {item.displaySite} */}
+										</div>
+
+										{/* {item.displaySite && (
+											<div>
+												<h1>Welcome</h1>
+												<p>Welcome to my home.</p>
+												{item.frameworksSite.map(site => (
+													<div key={site.id + "site"}>
+														x: {site.id + "pwa"}
+														{site.title}
+													</div>
+												))}
+											</div>
+										)} */}
+
 										{/* <a href={item.image}>{item.title}</a> */}
 									</li>
 								))}
+
 								<br />
 								<br />
 							</ul>

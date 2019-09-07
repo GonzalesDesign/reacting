@@ -10,7 +10,7 @@
 	top: -50px;
 	width: 100vw;
 	// max-width: 922px; // 100vw;
-	height: 20vh;
+	// height: 20vh;
 	// overflow: hidden;
 	z-index: 200;
 	border: 0px solid var(--rlg-color-danger);
@@ -29,8 +29,9 @@
 		// height: 50vh;
 		padding: 20px 0 0 0;
 		background: white;
-		border: 1px solid grey;
+		border: 0px solid grey;
 		border-radius: 30px 0px 30px 0px;
+		box-shadow: 4px 6px 10px rgba(black, .1);
 
 		.main-feature-title {
 			padding: 20px 10px 40px 10px;

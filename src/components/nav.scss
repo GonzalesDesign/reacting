@@ -113,6 +113,13 @@ nav.navigation-main-container {
 			color: var(--rlg-color-medium);
 			text-decoration: none;
 		}
+
+		.selected {
+			color: var(--rlg-color-danger);
+		}
+		// a:focus {
+		// 	color: var(--rlg-color-danger);
+		// }
 		
 	}
 }

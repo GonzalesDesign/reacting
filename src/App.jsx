@@ -17,7 +17,7 @@ import NavigationComponent from './components/nav';
 // import ProjectsComponent from './pages/projects/projects';
 // import ContactComponent from './pages/contact/contact';
 // import ExtraComponent from './xtrapage';
-// import FooterComponent from './components/footer.jsx';
+import FooterComponent from './components/footer';
 
 /*--------=| Main Component Function |=--------*/
 export default function App() {
@@ -89,7 +89,7 @@ export default function App() {
 
       {/* <div> */}
         { /*--=| footer navigation |=---*/ }
-        {/* <FooterComponent/> */}
+        <FooterComponent/>
       {/* </div> */}
 
     </div>
